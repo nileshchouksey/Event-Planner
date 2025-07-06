@@ -1,10 +1,11 @@
 import User from "../models/usermodel.js";
 import bcrypt from "bcrypt";
+import genToken from "../utils/auth.js";
 export const RegisterUser = async (req, res, next) => {
   try {
-    const { fullname, email, phone, password } = req.body;
+    const { fullName, email, phone, password } = req.body;
 
-    if (!fullname || !email || !phone || !password) {
+    if (!fullName || !email || !phone || !password) {
       const error = new Error("All fields Reqired");
       error.statusCode = 400;
       return next(error);
@@ -18,7 +19,7 @@ export const RegisterUser = async (req, res, next) => {
 
     const hashedPassword = await bcrypt.hash(password, 10);
     const newUser = await User.create({
-      fullname,
+      fullName,
       email,
       phone,
       password: hashedPassword,
@@ -52,10 +53,10 @@ export const LoginUser = async (req, res, next) => {
       error.statusCode = 401;
       return next(error);
     }
-
+    genToken(user._id,res);
     res
       .status(200)
-      .json({ message: `Welcome back ${user.fullname}`, data: user });
+      .json({ message: `Welcome back ${user.fullName}`, data: user });
   } catch (error) {
     next(error);
   }
