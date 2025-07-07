@@ -7,9 +7,7 @@ import Stories from "./pages/Stories";
 import Contact from "./pages/Contact";
 import Register from "./pages/Register";
 import {Toaster} from "react-hot-toast";
-import UserDashboard from "./UserDashboard";
-
-
+import UserDashboard from "./pages/userDashboard";
 const App = () => {
   return (
     <>
@@ -29,7 +27,7 @@ const App = () => {
            <Route path="/register" element={<Register/>}/>
            <Route path="/login"element={<Login/>}/>
            <Route path="/stories"element={<Stories/>}/>
-           <Route path="/userDashboard"element={<UserDashboard/>}/>
+           <Route path="/UserDashboard"element={<UserDashboard/>}/>
 
             
           </Routes>
