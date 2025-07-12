@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Jacquard+12&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Cedarville+Cursive&family=Poppins:wght@400;500;600&display=swap");
 @import "tailwindcss";
-/* @theme{
-    --customfont:"Cedarville Cursive",cursive;
-} */
+@theme{
+    --customfont: "Cedarville Cursive", cursive,san-serif;
+}
 
 
 /* Stories Section Styles */

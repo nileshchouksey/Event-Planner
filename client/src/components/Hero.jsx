@@ -1,36 +1,24 @@
 import React from "react";
-import homeBG from "../assets/homeBG.jpg";
+import bgphoto from "../assets/BG.png";
 
-export const Hero = () => {
+const Hero = () => {
   return (
-    <>
-      <div className="-mt-30 relative h-200 flex justify-center items-center">
-        <img src={homeBG} alt="" className="absolute -z-1" />\
-        <div className="grid justify-center items-center top-15">
-          {/* <h1 className="fw-bold display-1 text-white aos-init aos-animate" data-aos="fade-up" data-aos-duration="500"  >Turning Dreams into Reality</h1> */
-          <h1
-  className="
-    text-6xl md:text-7xl lg:text-8xl
-    font-bold font-playfair-display
-    text-fuchsia-400 text-center
-    leading-tight
-    aos-init aos-animate
-  "
-  data-aos="fade-up"
-  data-aos-duration="700"
->
-  Turning Dreams into Reality
-</h1>
+   <>
+   <div className="mt-[-10%] relative h-200 flex justify-center items-center">
+        <img src={bgphoto} alt="" className="absolute -z-1 opacity-120" />
 
-          }
-
-          <div className="flex justify-center items-center gap-10 ">
-            {/* <button className="rounded px-5 py-3 bg-red-400 ">Log In</button>
-            <button className="rounded px-5 py-3 bg-red-400 ">Book Now</button> */}
+        <div className="grid mt-30 gap-20 justify-items-center bg-gradient-to-r from-red-400/15 to-pink-200/25 rounded-xl p-10 w-3/4">
+          <h1 className="text-9xl font-black font-[family-name:var(--customFont)]  text-center bg-[url('12609.webp')] bg-center bg-contain bg-clip-text text-pink-200   p-3">
+            Turn Your Dream Into Reality
+          </h1>
+          <div className="flex gap-10 ">
+            <button className="rounded px-10 py-3  text-white  bg-pink-500 hover:bg-pink-600">Book Now</button>
+          <button className="rounded px-10 py-3 text-pink-500 border-3 border-pink-500 hover:bg-pink-600 hover:text-white">Read More</button>
           </div>
         </div>
       </div>
-    </>
+   
+   </>
   );
 };
 
