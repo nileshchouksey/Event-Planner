@@ -15,7 +15,10 @@ const ProfileEditModal = ({ isOpen, onClose, oldData }) => {
               <IoIosCloseCircle className="text-3xl text-red-500" />
             </button>
           </div>
+
+          
         </div>
+
       </div>
     </>
   );
